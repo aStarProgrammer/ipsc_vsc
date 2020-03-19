@@ -1,0 +1,39 @@
+0.1.0.1 2019/12/5
+*SiteFolder SiteOutputFolder SourcePagePath cannot contains space now, because ipsc will call cmd and bash to run some external commands, if these path have spaces in them, calling of external commands will fail.
+
+0.1.1.0 2019/12/6
+*Add Function  ExportSourcePages:Export source files (Markdown,Html,Links and title images) into ExportFolder
+
+0.1.2.0 2019/12/12
+*Add more comment to Error Message
+*Replace cmd mklink with Os.SymLink in MakeSoftLink
+*Change calling method of pandoc
+
+0.1.2.1 2019/12/14
+*Not allow to add source page that already exist
+
+0.1.2.2 2019/12/17
+*Fix some bugs
+
+0.1.2.3 2019/12/18
+*Fix bug: Delete more than 1 source page one time may cause app crash, and make sp file unreadable
+*Add output of all system error
+*Change error output from console to log file, normal message will output to console
+
+0.2.0.0 2019/12/22
+*Add Feature: 3  new commands, AddFile,DeleteFile and ListFile, now you can add normal file or folder to the site project
+              and add reference of them in your markdown file.
+              For more information, read the FullHelp.txt
+
+0.2.0.1 2019/12/23
+*Fix Bug: UpdatePage but file will not compile again 
+
+0.2.0.2 2020/3/8
+*Fix Bug: cannot delete link output file when delete source link
+* change Link.txt to Link.liks
+
+0.2.0.3 2020/3/18
+*Fix Bug: Cannot delete old more source pages when previous compile created a more page but current compile cannot create more page.
+          For example, previous 6 source pages, will create a more page.
+          Now the site only have 5 source pages, will not create a more page. But more page created in previous compile will not be deleted.
+*Fix Bug: Cannot update title image

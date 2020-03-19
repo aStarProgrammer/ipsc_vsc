@@ -1,0 +1,1 @@
+move /Y ..\ipsc_vsc.exe ..\..\ipsc_vsc_release\Windows\Windows_X86\

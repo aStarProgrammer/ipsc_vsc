@@ -1,0 +1,1 @@
+move /Y ..\ipsc_vsc ..\..\ipsc_vsc_release\Arm6\
