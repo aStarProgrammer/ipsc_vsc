@@ -8,10 +8,9 @@ import (
 )
 
 type PsfMetadata struct {
-	Title       string
-	Author      string
-	Description string
-	IsTop       bool
+	Title  string
+	Author string
+	IsTop  bool
 }
 
 func PsfMetadata2Json(link PsfMetadata) (string, error) {

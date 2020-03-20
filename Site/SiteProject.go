@@ -804,7 +804,6 @@ func (spp *SiteProject) ExportSourcePages(exportFolderPath string) (bool, error)
 				var psfMetadata Page.PsfMetadata
 				psfMetadata.Title = psf.Title
 				psfMetadata.Author = psf.Author
-				psfMetadata.Description = psf.Description
 				psfMetadata.IsTop = psf.IsTop
 
 				_, errSaveMetadata := Page.SavePsfMetadataToFile(targetMetaFilePath, psfMetadata)
@@ -840,7 +839,6 @@ func (spp *SiteProject) ExportSourcePages(exportFolderPath string) (bool, error)
 				var psfMetadata Page.PsfMetadata
 				psfMetadata.Title = psf.Title
 				psfMetadata.Author = psf.Author
-				psfMetadata.Description = psf.Description
 				psfMetadata.IsTop = psf.IsTop
 
 				_, errSaveMetadata := Page.SavePsfMetadataToFile(targetMetaFilePath, psfMetadata)
@@ -861,7 +859,6 @@ func (spp *SiteProject) ExportSourcePages(exportFolderPath string) (bool, error)
 				var linkMetadata Page.LinkMetadata
 				linkMetadata.Title = psf.Title
 				linkMetadata.Author = psf.Author
-				linkMetadata.Description = psf.Description
 				linkMetadata.IsTop = psf.IsTop
 				linkMetadata.Url = psf.SourceFilePath
 

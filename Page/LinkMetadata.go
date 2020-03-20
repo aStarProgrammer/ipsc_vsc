@@ -8,11 +8,10 @@ import (
 )
 
 type LinkMetadata struct {
-	Url         string
-	Title       string
-	Author      string
-	Description string
-	IsTop       bool
+	Url    string
+	Title  string
+	Author string
+	IsTop  bool
 }
 
 func LinkMeta2Json(link LinkMetadata) (string, error) {

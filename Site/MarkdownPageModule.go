@@ -226,7 +226,6 @@ func (mpmp *MarkdownPageModule) UpdateMarkdown(psf Page.PageSourceFile, filePath
 	psf_Backup := mpmp.spp.SourceFiles[_psfID]
 
 	if filePath != psf.SourceFilePath {
-
 		if Utils.PathIsExist(filePath) == false {
 			var errMsg = "MarkdownPageModule.UpdateMarkdown: Markdown file not exist"
 			Utils.Logger.Println(errMsg)
@@ -272,6 +271,7 @@ func (mpmp *MarkdownPageModule) UpdateMarkdown(psf Page.PageSourceFile, filePath
 			Utils.Logger.Println(errMsg)
 			return false, errors.New(errMsg)
 		}
+
 	} else {
 		bUpdate, errUpdate := mpmp.spp.UpdatePageSourceFile(psf)
 		if errUpdate != nil {

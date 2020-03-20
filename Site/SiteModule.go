@@ -978,7 +978,7 @@ func (smp *SiteModule) UpdatePage(pageID, title, description, author, filePath, 
 	}
 
 	var psf = smp.spp.SourceFiles[index]
-	var bFile bool
+
 	var errFile error
 
 	pageType := strings.ToUpper(psf.Type)
@@ -986,31 +986,50 @@ func (smp *SiteModule) UpdatePage(pageID, title, description, author, filePath, 
 	if filePath != "" {
 		switch pageType {
 		case Page.MARKDOWN:
-			bFile, errFile = FileIsMarkdown(filePath)
+			_, errFile = FileIsMarkdown(filePath)
 		case Page.HTML:
-			bFile, errFile = FileIsHtml(filePath)
+			_, errFile = FileIsHtml(filePath)
 
 		}
 		if errFile != nil {
-			return bFile, errFile
+			var errMsg = "SiteModule.UpdatePage: File at " + psf.SourceFilePath + " Format error, not markdown or html"
+			Utils.Logger.Println(errMsg)
+			psf.SourceFilePath = ""
+			return false, errors.New(errMsg)
 		}
 	} else {
 		filePath = psf.SourceFilePath
 	}
 
 	if title != "" {
-		psf.Title = title
+		if 0 == strings.Compare(title, "null") {
+			psf.Title = ""
+		} else {
+			psf.Title = title
+		}
 	}
 
 	if author != "" {
-		psf.Author = author
+		if 0 == strings.Compare(author, "null") {
+			psf.Author = ""
+		} else {
+			psf.Author = author
+		}
 	}
 
 	if description != "" {
-		psf.Description = description
+		if 0 == strings.Compare(description, "null") {
+			psf.Description = ""
+		} else {
+			psf.Description = description
+		}
 	}
 
-	if Utils.PathIsExist(titleImagePath) && Utils.PathIsImage(titleImagePath) {
+	a := strings.Compare(titleImagePath, "null")
+
+	if 0 == a {
+		psf.TitleImage = ""
+	} else if Utils.PathIsExist(titleImagePath) && Utils.PathIsImage(titleImagePath) {
 		titleImage, errImage := Utils.ReadImageAsBase64(titleImagePath)
 		if errImage == nil {
 			psf.TitleImage = titleImage

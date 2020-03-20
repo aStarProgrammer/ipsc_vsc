@@ -236,6 +236,7 @@ func (hpmp *HtmlPageModule) UpdateHtml(psf Page.PageSourceFile, filePath string)
 			Utils.Logger.Println(errMsg)
 			return false, errors.New(errMsg)
 		}
+
 	} else {
 		bUpdate, errUpdate := hpmp.spp.UpdatePageSourceFile(psf)
 		if errUpdate != nil {
