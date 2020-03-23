@@ -1,5 +1,5 @@
 cd ..\..\ipsc_vsc_release
-set ipscVersion=0.2.1.2
+set ipscVersion=0.2.1.3
 mkdir %ipscVersion%
 
 cd Windows

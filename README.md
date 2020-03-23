@@ -1,5 +1,5 @@
-# ipsc
-IPSC(Inter Planet Site Creator) is a tool to create static html site with index pages from md,html and hyperlink
+# ipsc_vsc
+IPSC_VSC(Inter Planet Site Creator) is a tool to create static html site with index pages from md,html and hyperlink
 
 ## Background
 
@@ -83,8 +83,8 @@ If you can not find a release for your platform, build it from source code as fo
 
 5. Install pandoc
     pandoc used to convert md to html 
-       	If you just want to compile IPSC, pandoc is not needed 
-       	If you want to run IPSC, pandoc is needed.
+       	If you just want to compile IPSC_VSC, pandoc is not needed 
+       	If you want to run IPSC_VSC, pandoc is needed.
        	https://www.pandoc.com
 
 6. Install go lib
@@ -92,7 +92,7 @@ If you can not find a release for your platform, build it from source code as fo
        go get github.com/aWildProgrammer/fconf
      	go get github.com/shamsher31/goimgtype
 
-7. Open ipsc with liteide 
+7. Open ipsc_vsc with liteide 
 
 8. Select the platform you needed, modify current environment according to step 1 and 3
     Modify GOROOT and PATH
@@ -101,13 +101,15 @@ If you can not find a release for your platform, build it from source code as fo
 
 ## Usage
 
-IPSC(InterPlanet Site Creator) is a tool to create static html site with index pages from md,html and hyperlink
+IPSC_VSC(InterPlanet Site Creator) is a tool to create static html site with index pages from md,html and hyperlink
+
+##### NOTE: Run this tool with Administrator Permission
 
 * Get This Help
 		    
 
 	```bash
-	ipsc -Command "Help" -HelpType
+	ipsc_vsc -Command "Help" -HelpType
 	```
 
 	Get help
@@ -117,30 +119,30 @@ IPSC(InterPlanet Site Creator) is a tool to create static html site with index p
 * Create New Empty Site
 		
 ```bash
-ipsc -Command NewSite -SiteFolder  -SiteFolder -SiteTitle  -SiteAuthor  -SiteDescription  -OutputFolder
+ipsc_vsc -Command NewSite -SiteFolder  -SiteFolder -SiteTitle  -SiteAuthor  -SiteDescription  -OutputFolder
 ```
 
 Create a new empty site project
 
-	
+
 Note: Run this method with super user or administrator permission
 	
-	* In Windows, start cmd with Administrator user, then run ipsc -Command "NewSite"
+	* In Windows, start cmd with Administrator user, then run ipsc_vsc -Command "NewSite"
 	
 	* In Linux/Darwin run this cmd with sudo
 
 Example:
 
 ```bash
-ipsc -Command "NewSite" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -SiteAuthor "Chao(sdxianchao@gmail.com)" -SiteDescription "Test Site for IPSC" -OutputFolder "F:\SiteOutputFolder"
+ipsc_vsc -Command "NewSite" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -SiteAuthor "Chao(sdxianchao@gmail.com)" -SiteDescription "Test Site for IPSC_VSC" -OutputFolder "F:\SiteOutputFolder"
 ```
 
 The site looks lite
 
-![Empty Site Folder](https://github.com/aStarProgrammer/ipsc/blob/master/Images/sitefolder.png)
+![Empty Site Folder](https://github.com/aStarProgrammer/ipsc_vsc/blob/master/Images/sitefolder.png)
 
 ```bash
-ipsc -Command "NewSite" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -SiteAuthor "Chao(sdxianchao@gmail.com)" -SiteDescription "Test Site for IPSC"
+ipsc_vsc -Command "NewSite" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -SiteAuthor "Chao(sdxianchao@gmail.com)" -SiteDescription "Test Site for IPSC_VSC"
 ```
 
 
@@ -149,7 +151,7 @@ ipsc -Command "NewSite" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -SiteAu
 * Update Site Property
 		
 ```bash
-ipsc -Command "UpdateSite" -SiteFolder -SiteTitle -SiteAuthor -SiteDescription
+ipsc_vsc -Command "UpdateSite" -SiteFolder -SiteTitle -SiteAuthor -SiteDescription
 ```
 
 This command will update the properties stored in sp file and, will update the name of sp file as SiteTitle changed
@@ -157,17 +159,17 @@ This command will update the properties stored in sp file and, will update the n
 Example:
 
 ```bash
-ipsc -Command "UpdateSite" -SiteFolder "F:\TestSite" -SiteTitle "Test Site 1" -SiteAuthor "Chao(sdxianchao@gmail.com)" -SiteDescription "Test Site for IPSC"
+ipsc_vsc -Command "UpdateSite" -SiteFolder "F:\TestSite" -SiteTitle "Test Site 1" -SiteAuthor "Chao(sdxianchao@gmail.com)" -SiteDescription "Test Site for IPSC_VSC"
 	
-ipsc -Command "UpdateSite" -SiteFolder "F:\TestSite" -SiteAuthor "Chao(sdxianchao@hotmail.com)"
+ipsc_vsc -Command "UpdateSite" -SiteFolder "F:\TestSite" -SiteAuthor "Chao(sdxianchao@hotmail.com)"
 		
-ipsc -Command "UpdateSite" -SiteFolder "F:\TestSite" -SiteTitle "Test Site " -SiteAuthor "Chao(sdxianchao@hotmail.com)" -SiteDescription "Test Site for IPSC"
+ipsc_vsc -Command "UpdateSite" -SiteFolder "F:\TestSite" -SiteTitle "Test Site " -SiteAuthor "Chao(sdxianchao@hotmail.com)" -SiteDescription "Test Site for IPSC_VSC"
 ```
 
 * Get Site Properties
 		
 ```bash
-ipsc -Command "GetSiteProperty" -SiteFolder  -SiteTitle
+ipsc_vsc -Command "GetSiteProperty" -SiteFolder  -SiteTitle
 ```
 
 This command will display site properties of a site project
@@ -175,7 +177,7 @@ This command will display site properties of a site project
 Example:
 
 ```bash
-ipsc -Command "GetSiteProperty" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
+ipsc_vsc -Command "GetSiteProperty" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
 ```
 
 
@@ -184,7 +186,7 @@ ipsc -Command "GetSiteProperty" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
 * List Source Pages
 		
 ```bash
-ipsc -Command "ListSourcePages" -SiteFolder -SiteTitle
+ipsc_vsc -Command "ListSourcePages" -SiteFolder -SiteTitle
 ```
 
 List all the source pages
@@ -192,13 +194,13 @@ List all the source pages
 ​	Example	
 
 ```bash
-ipsc -Command "ListSourcePages" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
+ipsc_vsc -Command "ListSourcePages" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
 ```
 
 * List Output Pages
 		
 ```bash
-ipsc -Command "ListOutputPages" -SiteFolder -SiteTitle
+ipsc_vsc -Command "ListOutputPages" -SiteFolder -SiteTitle
 ```
 
 List all the output pages
@@ -207,7 +209,7 @@ Example
 	
 
 ```bash
-ipsc -Command "ListOutputPages" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
+ipsc_vsc -Command "ListOutputPages" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
 ```
 
 
@@ -215,7 +217,7 @@ ipsc -Command "ListOutputPages" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
 * List Page
 		
 ```bash
-ipsc -Command "ListPage" -SiteFolder  -SiteTitle  -PageID
+ipsc_vsc -Command "ListPage" -SiteFolder  -SiteTitle  -PageID
 ```
 
 Display properties of page with specific ID
@@ -223,7 +225,7 @@ Display properties of page with specific ID
 Example
 
 ```bash
-ipsc -Command "ListPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "d0b75300ade9ea73cf45f29c7aac6ffa"
+ipsc_vsc -Command "ListPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "d0b75300ade9ea73cf45f29c7aac6ffa"
 ```
 
 
@@ -232,7 +234,7 @@ ipsc -Command "ListPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageI
 * Create Markdown File
 		
 ```bash
-ipsc -Command "CreateMarkdown" -SiteFolder -SiteTitle -PagePath -MarkdownType
+ipsc_vsc -Command "CreateMarkdown" -SiteFolder -SiteTitle -PagePath -MarkdownType
 ```
 
 Create Markdown file at PagePath with MarkdownType, copy needed md file from SiteFolder with SiteTitle
@@ -240,13 +242,13 @@ Create Markdown file at PagePath with MarkdownType, copy needed md file from Sit
 Example
 
 ```bash
-ipsc -Command "CreateMarkdown" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PagePath "F:\MarkdownWorkspace\_A1.md" -MarkdownType "News"
+ipsc_vsc -Command "CreateMarkdown" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PagePath "F:\MarkdownWorkspace\_A1.md" -MarkdownType "News"
 ```
 
 * Add Page
 		
 ```bash
-ipsc -Command "AddPage" -SiteFolder -SiteTitle -PagePath -LinkUrl -PageType -PageTitle -PageAuthor -TitleImage -IsTop
+ipsc_vsc -Command "AddPage" -SiteFolder -SiteTitle -PagePath -LinkUrl -PageType -PageTitle -PageAuthor -TitleImage -IsTop
 ```
 
 Add the Source Page file, with type PageType (MARKDOWN,HTML,LINK) to the SiteFolder\Src\Markdown or SiteFolder\Src\Html, and add metadata to site project file, including PageTitle PageAuthor PageTitleImage
@@ -254,34 +256,44 @@ Add the Source Page file, with type PageType (MARKDOWN,HTML,LINK) to the SiteFol
 Example
 
 ```bash
-ipsc -Command "AddPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PagePath "F:\MarkdownWorkspace\A1.md" -PageType "Markdown" -PageTitle "Test Markdown Page" -PageAuthor "Chao" -TitleImage "F:\MarkdownWorkspace\muxing.png" -IsTop false
+ipsc_vsc -Command "AddPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PagePath "F:\MarkdownWorkspace\A1.md" -PageType "Markdown" -PageTitle "Test Markdown Page" -PageAuthor "Chao" -TitleImage "F:\MarkdownWorkspace\muxing.png" -IsTop false
 
-ipsc -Command "AddPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PagePath "F:\MarkdownWorkspace\_A1.html" -PageType "Html" -PageTitle "Test Html Page" -PageAuthor "Chao" -TitleImage "F:\MarkdownWorkspace\muxing.png" -IsTop true
+ipsc_vsc -Command "AddPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PagePath "F:\MarkdownWorkspace\_A1.html" -PageType "Html" -PageTitle "Test Html Page" -PageAuthor "Chao" -TitleImage "F:\MarkdownWorkspace\muxing.png" -IsTop true
 		
-ipsc -Command "AddPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -LinkUrl "https://www.google.com" -PageType "Link" -PageTitle "Test Link Page" -PageAuthor "Chao" -TitleImage "F:\MarkdownWorkspace\muxing.png" -IsTop true
+ipsc_vsc -Command "AddPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -LinkUrl "https://www.google.com" -PageType "Link" -PageTitle "Test Link Page" -PageAuthor "Chao" -TitleImage "F:\MarkdownWorkspace\muxing.png" -IsTop true
 ```
 
 * Update Page
 
 ```bash
-ipsc -Command "UpdatePage" -SiteFolder -SiteTitle -PageID -PagePath -LinkUrl -PageTitle -PageAuthor -TitleImage -IsTop
+ipsc_vsc -Command "UpdatePage" -SiteFolder -SiteTitle -PageID -PagePath -LinkUrl -PageTitle -PageAuthor -TitleImage -IsTop
 ```
 
 Update the Source Page file, Update the file or properties if any of them are assigned.
 ​Example
 
 ```bash
-ipsc -Command "UpdatePage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "fc0f8d635ebb04d1c9393a722e8fc185" -PagePath "F:\MarkdownWorkspace\A1.md" -PageTitle "Test Markdown Page 1" -PageAuthor "Chao(sdxianchao@gmail.com)" -TitleImage "F:\MarkdownWorkspace\CNUK.png" -IsTop true
+ipsc_vsc -Command "UpdatePage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "fc0f8d635ebb04d1c9393a722e8fc185" -PagePath "F:\MarkdownWorkspace\A1.md" -PageTitle "Test Markdown Page 1" -PageAuthor "Chao(sdxianchao@gmail.com)" -TitleImage "F:\MarkdownWorkspace\CNUK.png" -IsTop true
 
-ipsc -Command "UpdatePage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "fc0f8d635ebb04d1c9393a722e8fc185"  -PageTitle "Test Page Title 2"
+ipsc_vsc -Command "UpdatePage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "fc0f8d635ebb04d1c9393a722e8fc185"  -PageTitle "Test Page Title 2"
 
-ipsc -Command "UpdatePage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "15fc19f3766fd7edf1f129018faa29cc" -LinkUrl "https://www.microsoft.com"
+ipsc_vsc -Command "UpdatePage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "15fc19f3766fd7edf1f129018faa29cc" -LinkUrl "https://www.microsoft.com"
+```
+
+For PageTitle PageAuthor and TitleImage, if you set the value as "", ipsc_vsc will clear the property. If you also set it as "null" to clear its value.
+
+Example
+
+Following command will clear title of the page.
+
+```bash
+ipsc_vsc -Command "UpdatePage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "fc0f8d635ebb04d1c9393a722e8fc185"  -PageTitle ""
 ```
 
 * Delete Page
 
 ```bash
-ipsc -Command "DeletePage" -SiteFolder -SiteTitle -PageID -RestorePage
+ipsc_vsc -Command "DeletePage" -SiteFolder -SiteTitle -PageID -RestorePage
 ```
 
 Delete the page with PageID from site project , if RestorePage is true, page will be moved to recycled bin. if RestorePage is false, page will be deleted directly. RestorePage defaultly true.
@@ -290,7 +302,7 @@ Example
 
 ```bash
 
-ipsc -Command "DeletePage"  -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID 
+ipsc_vsc -Command "DeletePage"  -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID 
 
 
 "fc0f8d635ebb04d1c9393a722e8fc185" -RestorePage true
@@ -299,7 +311,7 @@ ipsc -Command "DeletePage"  -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -Pa
 * List Recycled Pages
 		       
 ```bash
-ipsc -Command "ListRecycledPages" -SiteFolder -SiteTitle
+ipsc_vsc -Command "ListRecycledPages" -SiteFolder -SiteTitle
 ```
 
 List all the pages in the recycled bin	
@@ -307,12 +319,12 @@ List all the pages in the recycled bin
 Example
 
 ```bash
-ipsc -Command "ListRecycledPages" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
+ipsc_vsc -Command "ListRecycledPages" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
 ```
 
 * Restore Recycled Page	
 ```bash
-ipsc -Command "RestoreRecycledPage" -SiteFolder -SiteTitle -PageID
+ipsc_vsc -Command "RestoreRecycledPage" -SiteFolder -SiteTitle -PageID
 ```
 
 Restore page with PageID if page is recycled
@@ -320,42 +332,42 @@ Restore page with PageID if page is recycled
 Example
 
 ```bash
-ipsc -Command "RestoreRecycledPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "fc0f8d635ebb04d1c9393a722e8fc185
+ipsc_vsc -Command "RestoreRecycledPage" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -PageID "fc0f8d635ebb04d1c9393a722e8fc185
 ```
 
 * Clear Recycled Pages   
 	
 ```bash
-ipsc -Command "ClearRecycledPages" -SiteFolder -SiteTitle
+ipsc_vsc -Command "ClearRecycledPages" -SiteFolder -SiteTitle
 ```
 
 Remove all the recycled pages
 ​Example
 
 ```bash
-ipsc -Command "ClearRecycledPages" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
+ipsc_vsc -Command "ClearRecycledPages" -SiteFolder "F:\TestSite" -SiteTitle "Test Site"
 ```
 
 * Add File
 
 ```bash
-ipsc -Command "AddFile" -SiteFolder  -SiteTitle  -FilePath  -Force 
+ipsc_vsc -Command "AddFile" -SiteFolder  -SiteTitle  -FilePath  -Force 
 ```
 
 Add the file with FilePath, the FilePath can be file or folder, if it is a folder, the folder will be added to the site project. 
 
-If you set Force to "true", ipsc will replace the existing file during adding
+If you set Force to "true", ipsc_vsc will replace the existing file during adding
 	
 Example
 
 ```bash
-ipsc -Command "AddFile" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -FilePath "D:\softwares" -Force "true"
+ipsc_vsc -Command "AddFile" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -FilePath "D:\softwares" -Force "true"
 ```
-	
+
 * Delete File
 
 ```bash
-ipsc -Command "DeleteFile" -SiteFolder  -SiteTitle -FilePath 
+ipsc_vsc -Command "DeleteFile" -SiteFolder  -SiteTitle -FilePath 
 ```
 
 Delete the file with FilePath, the FilePath can be file or folder, if FilePath is a folder, the folder will be deleted from site project
@@ -363,7 +375,7 @@ Delete the file with FilePath, the FilePath can be file or folder, if FilePath i
 Example
 	
 ```bash
-ipsc -Command "DeleteFile" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -FilePath ".\Files\go.msi"
+ipsc_vsc -Command "DeleteFile" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -FilePath ".\Files\go.msi"
 ```
 
 Use FilePath ".\Files" or "./Files" to clear the Files Folder 
@@ -371,13 +383,13 @@ Use FilePath ".\Files" or "./Files" to clear the Files Folder
 Example 
 
 ```bash
-ipsc -Command "DeleteFile" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -FilePath ".\Files"
+ipsc_vsc -Command "DeleteFile" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -FilePath ".\Files"
 ```
 
 * List File
 
 ```bash
-ipsc -Command "ListFile" -SiteFolder  -SiteTitle 
+ipsc_vsc -Command "ListFile" -SiteFolder  -SiteTitle 
 ```
 
 List all the files added by AddFile, return name and its relative Url, the url can be used as src/href in your md or html file, or used to delete the file
@@ -385,12 +397,12 @@ List all the files added by AddFile, return name and its relative Url, the url c
 Example:
 
 ```bash
-ipsc -Command "ListFile" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" 	
+ipsc_vsc -Command "ListFile" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" 	
 ```
 
 * Compile the site
 ```bash
-ipsc -Command "Compile" -SiteFolder -SiteTitle -IndexPageSize
+ipsc_vsc -Command "Compile" -SiteFolder -SiteTitle -IndexPageSize
 ```
 
 Compile the site, change md to html and save it to output, copy html to output, create index page and more pages, then covert them to html,and save to output
@@ -398,11 +410,11 @@ Compile the site, change md to html and save it to output, copy html to output, 
 Example
 
 ```bash
-ipsc -Command "Compile" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -IndexPageSize "Normal"
+ipsc_vsc -Command "Compile" -SiteFolder "F:\TestSite" -SiteTitle "Test Site" -IndexPageSize "Normal"
 ```
 
 
-For full help, run ipsc -Help FullHelp
+For full help, run ipsc_vsc -Help FullHelp
 
 
 
@@ -420,3 +432,17 @@ Send email to sdxianchao@gmail.com
 ## License
 
 [MIT](LICENSE)
+
+## HomePage
+
+* Github
+
+  https://github.com/astarprogrammer/ipsc_vsc
+
+* IPFS
+
+  http://localhost:8080/ipns/QmYY127PK6pczLrEB1p1mijTFr8RsvRqKFX5q4XepxS1fd/
+
+​	Visit the following page for how to connect ipfs network and visit the above web site
+
+​		https://ipfs.io

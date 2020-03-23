@@ -1,0 +1,7 @@
+If you want to create release for ips(including ipsc_vsc and resources from ipsc_vsc 
+and ipsd_vsc and its resources from ipsd_vsc, this release can be used directly after download)
+
+Run scripts in this Build folder firstly.
+Then run scripts in ipsd_vsc/Build.
+
+Must run in this order

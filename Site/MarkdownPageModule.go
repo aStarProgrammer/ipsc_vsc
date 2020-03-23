@@ -410,7 +410,7 @@ func (mpmp *MarkdownPageModule) Compile_Psf(psf Page.PageSourceFile) (int, error
 
 	var _pofIndex int
 	pofIndex := mpmp.spp.GetPageOutputFile(psf.OutputFile)
-	if psf.OutputFile != "" || pofIndex == -1 {
+	if psf.OutputFile == "" || pofIndex == -1 {
 		pof := Page.NewPageOutputFile()
 		pof.Author = psf.Author
 		pof.Description = psf.Description

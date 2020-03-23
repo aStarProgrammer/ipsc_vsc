@@ -48,3 +48,15 @@
 	If you don't want to update PageTitle property, don't add this property to the argument list.
 * Design Change
 	Now exported meta will not contain Description as it is useless
+	
+0.2.1.2 2020/3/20
+*Bug Fix
+	Fix bug in Build bat
+	Add script 0 to clean release folder of each Build
+*Design Change
+	Add commands to build bats, now they can create a new release combined with ipsd_vsc/ipsc_vsc
+	which can be downloaded and used directly. pandoc included
+
+0.2.1.3 2020/3/22
+*Bug Fix
+	Update Markdown will create another output information and add duplicate index in index page
